@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import instance from "../libs/axios/instance";
 import { TweetForm } from "./TweetForm";
 import {
   Button,
@@ -8,31 +7,15 @@ import {
   ModalContent,
   ModalFooter,
   ModalHeader,
-  useDisclosure,
 } from "@heroui/react";
 
 export const Home = () => {
-  // const [ping, setPing] = useState("");
-  // const fetchPing = async () => {
-  //   try {
-  //     const response = await instance.get("/ping");
-  //     setPing(response.data.meta.message);
-  //   } catch (error) {
-  //     console.error("Error fetching ping:", error);
-  //   } finally {
-  //     console.log("Fetch ping attempt finished.");
-  //   }
-  // }
-  useEffect(() => {
-    // fetchPing();
-  }, []);
-
   const [open, setOpen] = useState(true);
   return (
     <>
       <Modal isOpen={open}>
         <ModalContent>
-          <ModalHeader>WARNING!</ModalHeader>
+          <ModalHeader>WARNING! plz read</ModalHeader>
           <ModalBody>
             <p>
               Due to technicality it can only automate 15 tweets / 24 hour so

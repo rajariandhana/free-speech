@@ -9,13 +9,16 @@ import environment from './config/environment'
 
 function App() {
 
-  // if (!environment.ROOT_THREAD_ID || !environment.API_URL) {
-  //   return (
-  //     <div className="p-4">
-  //       <p className="text-red-500">Still setting up</p>
-  //     </div>
-  //   )
-  // }
+  if (!environment.API_URL || !environment.X_USERNAME || !environment.ROOT_THREAD_ID) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+        <div className='bg-red-100 rounded-md shadow-md p-4 flex w-full border-red-500 border-2'>
+          <p className="text-red-500 text-xl">Give me 1 minute I'm editing something.</p>
+
+        </div>
+      </div>
+    )
+  }
   
   return (
     <Routes>
