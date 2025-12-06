@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@plugin './hero.ts';
+/* Note: You may need to change the path to fit your project structure */
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+.bg {
+  min-height: 100vh;
+  background-image: url('/freedom.png'); /* Replace with the actual image path */
+  background-size: cover; /* Ensures the background image covers the entire screen */
+  background-position: center;
+  background-attachment: fixed; /* Optional: keeps the background image fixed during scrolling */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* <-- adjust opacity here */
+  z-index: 1;
+}
