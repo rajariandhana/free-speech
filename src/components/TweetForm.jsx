@@ -33,8 +33,8 @@ export const TweetForm = () => {
     setTextAreaErrorMessage("");
 
     try {
-      const response = await instance.post("/tweet/linked-list/push", {
-        "root_tweet_id": environment.ROOT_THREAD_ID,
+      const response = await instance.post("/tweet", {
+        // "root_tweet_id": environment.ROOT_THREAD_ID,
         "text": textAreaValue,
       });
       // const response = await instance.post("/messages", {

@@ -9,7 +9,7 @@ import environment from './config/environment'
 
 function App() {
 
-  if (!environment.API_URL || !environment.X_USERNAME || !environment.ROOT_THREAD_ID) {
+  if (!environment.API_URL || !environment.X_USERNAME) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
         <div className='bg-red-100 rounded-md shadow-md p-4 flex w-full border-red-500 border-2'>
